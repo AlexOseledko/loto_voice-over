@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loto Generator</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="history-table">
+            <div class="title">
+                <h2>История:</h2>
+                <button class="reset-btn btn">Очистить</button>
+            </div>
+            <table>
+                <thead>
+                    <td>+</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </thead>
+                <tbody id="num_history"></tbody>
+            </table>
+        </div>
+
+        <div class="generator">
+            <div class="titles">
+                <span id="prev-num-4">4x</span>
+                <span id="prev-num-3">3x</span>
+                <span id="prev-num-2">2x</span>
+                <span id="prev-num-1">1x</span>
+                <div class="main-title">
+                    <h2 id="title-num">XX</h2>
+                </div>
+            </div>
+
+            <button class="btn" id="gen-btn">Генерировать числа</button>
+            <div class="auto-gen-blok">
+                <button class="btn" id="gen-auto-btn">Генерировать автоматически ></button>
+                <div class="show-options-btn btn">
+                    Дополнительные опции
+                </div>
+                <form class="adding-options">
+                    <div>
+                        <label for="delay">Задержка (секунд)</label>
+                        <input type="range" min="1" max="5" value="2.5" step="0.1" id="delay">
+                        <div class="delay-value">2.5</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <label for="rate">Темп</label><input type="range" min="0.5" max="2" value="1" step="0.1"
+                            id="rate">
+                        <div class="rate-value">1</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div>
+                        <label for="pitch">Высота</label><input type="range" min="0" max="2" value="1" step="0.1"
+                            id="pitch">
+                        <div class="pitch-value">1</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <select>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/speak.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
